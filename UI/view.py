@@ -22,12 +22,12 @@ class View(ft.UserControl):
 
         #ROW with some controls
         self.ddAnno = ft.Dropdown(label="Anno", width=300)
-
+        self._controller.fillDDAnno()
         self.btn_graph = ft.ElevatedButton(text="Crea Grafo", width=200, on_click=self._controller.handle_graph)
         row1= ft.Row([self.ddAnno, self.btn_graph], alignment=ft.MainAxisAlignment.CENTER)
 
         self.ddMetodo = ft.Dropdown(label="Metodo", width=300)
-
+        self._controller.fillDDMethod()
         self.btnProdottiRedditizi = ft.ElevatedButton(text="Prodotto Redditizi", width=200, on_click=self._controller.handleProdottiRedditizi)
         row2 = ft.Row([self.ddMetodo, self.btnProdottiRedditizi], alignment=ft.MainAxisAlignment.CENTER)
 
